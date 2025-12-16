@@ -1,0 +1,60 @@
+/* main select box */
+.select__control {
+  background-color: #000000;     /* dark bg */
+  border: 1px solid rgb(106, 177, 0);
+  border-radius: 8px;
+  box-shadow: 0 0 3px rgb(20, 116, 1);
+  min-height: 44px;
+}
+
+/* hover border */
+.select__control:hover {
+  border-color: #0b0c14;
+}
+
+/* placeholder */
+.select__placeholder {
+  color: #94a3b8;
+}
+
+/* selected value text */
+.select__single-value {
+  color: #a8a8a8;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.8px;
+}
+
+/* dropdown menu */
+.select__menu {
+  background-color: #000000;
+  border-radius: 8px;
+  border: 1px solid green;
+}
+
+/* each option */
+.select__option {
+  color: #ffffff;
+  background-color: transparent;
+}
+
+/* hover option */
+.select__option--is-focused {
+  background-color: #1e293b;
+}
+
+/* selected option */
+.select__option--is-selected {
+  background-color: #6366f1;
+  color: white;
+}
+
+/* dropdown indicator (arrow) */
+.select__indicator {
+  color: #c7d2fe;
+}
+
+/* remove separator line */
+.select__indicator-separator {
+  display: none;
+}
