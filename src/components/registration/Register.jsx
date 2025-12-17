@@ -5,10 +5,12 @@ import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import {useDispatch} from 'react-redux'
 import { authActions } from '../../../store/authSlice';
+import {PulseLoader} from "react-spinners";
 const Register = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
-    const [action, setAction] = useState(false);
+  const [action, setAction] = useState(false);
+  const [loading, setLoading] = useState(false);
   const [inputs, setInputs] = useState({
     username: "",
     email: "",
@@ -21,6 +23,7 @@ const Register = () => {
   
   const handleFormSubmit = async(e) => {
     e.preventDefault();
+    setLoading(true);
     if (!action) {
       try {
         await axios.post(`${import.meta.env.VITE_API_URL}/api/v1/register`, inputs).then((res) => {
@@ -36,6 +39,7 @@ const Register = () => {
       } catch (error) {
         toast.error(error.message)
       }
+      setLoading(false)
     }
     if (action) {
       try {
@@ -48,12 +52,14 @@ const Register = () => {
           }
           alert(`🙏 Welcome ${res.data.others.username}! You are successfully logged in`)
           localStorage.setItem("id", res.data.others._id)
+          localStorage.setItem("name",res.data.others.username)
           dispatch(authActions.login());
           navigate("/generate")
         })
       } catch (error) {
         toast.error(error.message);
       }
+      setLoading(false);
     }
   } 
   return (
@@ -72,7 +78,15 @@ const Register = () => {
             {
                 action ? <p>Don't have an account? <span className='sign' onClick={()=>setAction(false)}>Sign Up</span></p> : <p>have you already an account?<span className='sign' onClick={()=>setAction(true)}> Sign In</span></p>
             }
-            <button type='submit'>{action ? "Sign In" : "Sign Up"} </button>
+          <button type='submit'>
+            {loading && <PulseLoader color="#813bbbff" className='loading'/>}
+            {
+              action ?
+                "Sign In"
+                :
+                "Sign Up"
+            }
+          </button>
         </form>
       </div>
     </div>

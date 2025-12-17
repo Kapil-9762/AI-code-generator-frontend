@@ -1,14 +1,15 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import './Navbar.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { authActions } from '../../../store/authSlice';
 import { toast, ToastContainer } from 'react-toastify';
-const Narbar = () => {
+const Narbar = ({userName}) => {
   const dispatch = useDispatch();
   const isLoggedin = useSelector((state) => state.isLoggedin);
   const handleLogout = () => {
     localStorage.removeItem("id");
+    localStorage.removeItem("name");
     dispatch(authActions.logout());
     toast.success("You are logged out successfully.")
   }
@@ -21,7 +22,7 @@ const Narbar = () => {
         <Link to="/" className='item'>Home</Link>
         <Link to="/about" className='item'>About</Link>
         {
-          isLoggedin ? <Link className='item' onClick={handleLogout}>Logout</Link> : <Link to="/register" className='item'>Login</Link>
+            isLoggedin ? <Link className='logout' onClick={handleLogout} title='Logout'>{userName && userName.charAt(0).toUpperCase() || "👤"}</Link> : <Link to="/register" className='item'>Login</Link>
         }    
         <Link to="/generate" style={{display:"none"}}>Get Start</Link>
       </nav>

@@ -10,10 +10,11 @@ import { useDispatch } from 'react-redux';
 import { authActions } from '../store/authSlice';
 import Footer from './components/footer/Footer';
 let id = localStorage.getItem("id");
+let userName = localStorage.getItem("name");
 const App = () => {
   const dispatch = useDispatch();
   useEffect(() => {
-    if (id) {
+    if (id && userName) {
       dispatch(authActions.login()); 
     }
   },[])
@@ -21,7 +22,7 @@ const App = () => {
     <div>
       <div>
         <BrowserRouter>
-          <Narbar/>
+          <Narbar userName={userName} />
           <Routes>
              <Route path="/" element={<Home/>} />
              <Route path="/about" element={<About/>} />
