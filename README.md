@@ -1,16 +1,29 @@
-# React + Vite
+🚀 AI Code Generator – Frontend
+This is the frontend part of an AI-based Code Generator application.
+Autherized user can generate code using AI prompts and select tech option, view it in a code editor, and easily copy the output.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+✨ Features
+🤖 AI-based code generation
+🧑‍💻 Monaco Code Editor (syntax highlighting)
+📋 One-click copy generated code
+🔄 Refresh the Editor
+🌙 Dark / Tech-style UI
+⚡ Fast & responsive frontend
+🔄 Loading & error handling
+🤖 User Authentication and Autherization
 
-Currently, two official plugins are available:
+🛠 Tech Stack
+React (Vite)
+Redux Toolkit
+Monaco Editor
+CSS3
+Gemini AI API (integration ready)
+many npm packages such as react- react-router-dom, react-toastify, react-select,react-icons etc
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+🌐 Backend
+👉 This repository contains only the frontend.
+  Backend:-[source--code](https://github.com/Kapil-9762/AI-code-generator-backend)
 
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+👨‍💻 Author
+Kapil Chandra Prajapati
+Aspiring MERN + GenAI Developer 🚀
