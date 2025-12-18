@@ -57,7 +57,7 @@ const Register = () => {
           navigate("/generate")
         })
       } catch (error) {
-        toast.error(error.message);
+        console.log(error.message);
       }
       setLoading(false);
     }
