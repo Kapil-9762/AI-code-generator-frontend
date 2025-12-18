@@ -70,7 +70,7 @@ form .loading{
     border-radius: 8px;
     padding-top: 5px;
     background-color: #000000;
-    border: 1px solid blueviolet;
+    /* border: 1px solid blueviolet; */
 }
 /* media query */
 @media (max-width:576px) {
