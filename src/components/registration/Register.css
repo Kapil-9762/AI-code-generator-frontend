@@ -92,8 +92,10 @@ form .loading{
 @media (max-width:382px){
    .signup-container{
     padding:20px 15px;
+    gap: 35px;
     & form{
-        gap: 18px;
+        gap: 25px;
+        min-width: 80vw;
     }
     & form input{
         min-width: 100%;

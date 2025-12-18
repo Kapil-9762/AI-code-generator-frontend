@@ -180,7 +180,7 @@ Requirements:
             :
             <div className="code-sec flex f-col al-center g-10">
               <FaCode className='icon'/>
-              <p>Your code will appear here.</p>
+              <p>Your code will be appear here.</p>
             </div>
         }
       </div>

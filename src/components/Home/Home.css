@@ -48,13 +48,3 @@
 .arrow{
         padding-top: 8px
     }
-/* media query */
-
-@media (max-width:780px){
-    .home-container h1{
-        font-size: 2.5rem;
-    }
-    .home-container  button{
-        font-size: 1.1rem;
-    }
-}

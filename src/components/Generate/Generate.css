@@ -141,3 +141,24 @@
         color: rgb(156, 156, 156);
     }
 }
+
+@media (max-width:655px) {
+    .gen-btn{
+        flex-direction: column;
+        gap: 15px;
+        align-items: flex-start;
+        & button{
+            align-self: flex-end;
+        }
+    }
+    .code-function .icons{
+        gap: 15px;
+    }
+    .code-function .icons button{
+        padding: 5px 10px;
+    }
+    .code-sec .icon{
+        padding: 8px;
+        width: 40px;
+    }
+}
