@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom'
 import './Navbar.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { authActions } from '../../../store/authSlice';
-import { toast, ToastContainer } from 'react-toastify';
 const Narbar = ({userName}) => {
   const dispatch = useDispatch();
   const isLoggedin = useSelector((state) => state.isLoggedin);
@@ -11,11 +10,9 @@ const Narbar = ({userName}) => {
     localStorage.removeItem("id");
     localStorage.removeItem("name");
     dispatch(authActions.logout());
-    toast.success("You are logged out successfully.")
   }
   return (
     <>
-    <ToastContainer/>
     <div className='navbar container flex jc-sb g-10 al-center'>
       <h1 className='logo'>GenCode</h1>
       <nav className='nav-items flex g-30 al-center'>
