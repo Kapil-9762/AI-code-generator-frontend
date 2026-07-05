@@ -23,9 +23,7 @@
         line-height: 1.4;
     }
 }
-
 /* media query */
-
 @media (max-width:1000px) {
     .about{
         height: 88vh;
